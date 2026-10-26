@@ -1,0 +1,47 @@
+{
+  "project": "Day 20 BundleRecommender",
+  "status": "research prototype",
+  "sources": [
+    "Instacart Market Basket Analysis",
+    "UCI Online Retail II"
+  ],
+  "basket_selection": "Per user earlier prior orders for training, latest prior for holdout; sampled train subset",
+  "instacart": {
+    "holdout_baskets": 25000,
+    "rules_train": 13,
+    "rules_with_30_or_more_antecedent_baskets": 13,
+    "holdout_vocabulary_item_coverage": 0.24126905860690154,
+    "median_holdout_confidence_supported": 0.22890946502057613,
+    "median_holdout_lift_supported": 2.4195206929507265,
+    "evaluation_note": "Out-of-sample basket co-occurrence; not personalized CTR, causal lift or bundle revenue."
+  },
+  "uci": {
+    "n_train_baskets": 34264,
+    "n_test_baskets": 8567,
+    "n_rules": 150,
+    "n_skus": 100,
+    "warning": "Independent UCI product space; no cross-dataset ID join or comparable pooled lift"
+  },
+  "algorithm_benchmark": [
+    {
+      "algorithm": "fpgrowth",
+      "status": "ok",
+      "seconds": 3.67,
+      "frequent_itemsets": 92
+    },
+    {
+      "algorithm": "apriori",
+      "status": "ok",
+      "seconds": 2.65,
+      "frequent_itemsets": 92
+    }
+  ],
+  "no_causal_claim": true,
+  "limits": [
+    "Trained on bounded top product catalog",
+    "No causal basket lift",
+    "Period-shift and cold-start possible",
+    "No revenue conversion metrics",
+    "Rules used for product suggestions with human approval"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "root": "/kaggle/input/datasets/wafabila/bundlerecommender-dataset",
+  "instacart_files": [
+    "orders.csv",
+    "order_products__prior.csv",
+    "order_products__train.csv",
+    "products.csv",
+    "aisles.csv",
+    "departments.csv"
+  ],
+  "uci_available": true,
+  "train_protocol": "train earlier prior orders; hold out latest prior per user; no train baskets in evaluation",
+  "note": "Mirror files are not license evidence. Check original dataset terms."
+}

@@ -1,0 +1,8 @@
+path,size_mb,extension
+onlineretailii/online_retail_II.xlsx,43.51,.xlsx
+instacart/instacart/aisles.csv,0.0,.csv
+instacart/instacart/departments.csv,0.0,.csv
+instacart/instacart/order_products__prior.csv,550.8,.csv
+instacart/instacart/order_products__train.csv,23.54,.csv
+instacart/instacart/orders.csv,103.92,.csv
+instacart/instacart/products.csv,2.07,.csv

@@ -1,0 +1,3 @@
+algorithm,status,seconds,frequent_itemsets
+fpgrowth,ok,3.67,92
+apriori,ok,2.65,92

@@ -1,0 +1,9 @@
+{
+  "holdout_baskets": 25000,
+  "rules_train": 13,
+  "rules_with_30_or_more_antecedent_baskets": 13,
+  "holdout_vocabulary_item_coverage": 0.24126905860690154,
+  "median_holdout_confidence_supported": 0.22890946502057613,
+  "median_holdout_lift_supported": 2.4195206929507265,
+  "evaluation_note": "Out-of-sample basket co-occurrence; not personalized CTR, causal lift or bundle revenue."
+}

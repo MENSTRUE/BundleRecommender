@@ -1,0 +1,7 @@
+{
+  "n_train_baskets": 34264,
+  "n_test_baskets": 8567,
+  "n_rules": 150,
+  "n_skus": 100,
+  "warning": "Independent UCI product space; no cross-dataset ID join or comparable pooled lift"
+}

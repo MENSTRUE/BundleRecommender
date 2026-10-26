@@ -1,0 +1,8 @@
+{
+  "raw_rows": 1067371,
+  "filtered_unique_invoice_items": 1020658,
+  "train_invoices": 34264,
+  "later_invoices": 8567,
+  "selection": "80% earliest invoices by InvoiceDate; latest 20% held out",
+  "caution": "No storewide business performance inferred"
+}
