@@ -1,0 +1,28 @@
+{
+  "project": "BundleRecommender",
+  "version": "day20-full-master-v1",
+  "model_type": "association_rules_not_fitted_estimator",
+  "primary_rules_file": "instacart_rules.csv",
+  "secondary_rules_file": "uci_rules.csv",
+  "input_schema": {
+    "product_id": "integer Instacart product ID present in product_catalog.csv"
+  },
+  "output_schema": {
+    "consequent_id": "integer",
+    "confidence": "historical train co-occurrence conditional rate",
+    "lift": "historical train lift",
+    "support": "historical train basket support"
+  },
+  "parameters": {
+    "top_products": 120,
+    "min_support": 0.012,
+    "min_confidence": 0.15,
+    "min_lift": 1.05
+  },
+  "limitations": [
+    "Not a per-user recommender",
+    "Not causal revenue gain",
+    "Different SKU vocabularies in UCI and Instacart",
+    "Requires manual merchandising approval"
+  ]
+}
