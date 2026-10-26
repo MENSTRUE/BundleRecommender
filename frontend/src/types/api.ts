@@ -17,6 +17,19 @@ export type CatalogResponse = {
   count: number;
 };
 
+export type ProductDetails = {
+  id: string;
+  name: string;
+  has_description: boolean;
+};
+
+export type CatalogDetailsResponse = {
+  dataset: Dataset;
+  products: ProductDetails[];
+  count: number;
+  named_count: number;
+};
+
 export type Suggestion = {
   product: string;
   score: number | null;

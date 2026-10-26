@@ -1,0 +1,24 @@
+{
+  "generated_at_utc": "2026-10-26T12:42:40.729128+00:00",
+  "dataset_source": "/kaggle/input/datasets/wafabila/bundlerecommender-dataset/onlineretailii/online_retail_II.xlsx",
+  "sku_allowlist_source": "MENSTRUE/BundleRecommender/models/uci_rules.csv (GitHub main, inspected 2026-10-26)",
+  "rule_skus": 46,
+  "matched_named_skus": 46,
+  "unmatched_skus": [],
+  "rows_scanned": 1067371,
+  "matching_named_observations": 101404,
+  "sheets": [
+    {
+      "sheet": "Year 2009-2010",
+      "rows": 525461,
+      "matching_named_rows": 52202
+    },
+    {
+      "sheet": "Year 2010-2011",
+      "rows": 541910,
+      "matching_named_rows": 49202
+    }
+  ],
+  "selection_rule": "Most frequently observed nonblank Description per StockCode, lexicographic tie-break",
+  "caution": "Names are metadata only; no model training or association-rule changes performed."
+}

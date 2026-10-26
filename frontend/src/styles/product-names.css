@@ -1,0 +1,31 @@
+/* Display-only product labels; intentionally extends, not replaces, main.css. */
+.product-label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+  gap: 4px;
+  overflow-wrap: anywhere;
+}
+
+.product-label strong {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.product-label small {
+  display: block;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 1.35;
+  color: #8099b5;
+}
+
+.chip .product-label small {
+  color: #5a88b1;
+}
+
+.suggestion-top .product-label h3 {
+  margin: 0;
+}

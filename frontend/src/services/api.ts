@@ -1,4 +1,5 @@
 import type {
+  CatalogDetailsResponse,
   CatalogResponse,
   Dataset,
   HealthResponse,
@@ -18,11 +19,16 @@ async function request<T>(endpoint: string, options?: RequestInit): Promise<T> {
     throw new Error("Cannot reach FastAPI. Start backend on http://127.0.0.1:8000.");
   }
 
-  const data: unknown = await response.json();
+  let data: unknown;
+  try {
+    data = await response.json();
+  } catch {
+    throw new Error(`Backend returned an invalid response (HTTP ${response.status}).`);
+  }
+
   if (!response.ok) {
     const detail = (data as { detail?: unknown })?.detail;
-    const message = typeof detail === "string" ? detail : JSON.stringify(detail ?? data);
-    throw new Error(message);
+    throw new Error(typeof detail === "string" ? detail : JSON.stringify(detail ?? data));
   }
 
   return data as T;
@@ -32,6 +38,8 @@ export const api = {
   health: () => request<HealthResponse>("/health"),
   catalog: (dataset: Dataset) =>
     request<CatalogResponse>(`/catalog?dataset=${encodeURIComponent(dataset)}`),
+  catalogDetails: (dataset: Dataset) =>
+    request<CatalogDetailsResponse>(`/catalog/details?dataset=${encodeURIComponent(dataset)}`),
   recommend: (dataset: Dataset, items: string[], limit = 8) =>
     request<RecommendationResponse>("/recommend", {
       method: "POST",
